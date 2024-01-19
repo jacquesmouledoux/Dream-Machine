@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="top-row">
+        <div class="playbutton button"><span>PLAY</span></div>
+        <div class="clearbutton button"><span>CLEAR</span></div>
+        <div class="button tempo minus"><span class="plusminus">-</span></div>
+        <div class="tempotext">
+          <span class="temponumber" id="temponumber">120</span
+          ><span class="bpm"> BPM</span>
+        </div>
+        <div class="button tempo plus"><span class="plusminus">+</span></div>
+        <div class="title"><span class="title-text">DREAM MACHINE</span></div>
+      </div>
+      <div class="keys">
+        <div data-key="68" class="key" id="68">
+          <kbd id="68">KICK</kbd>
+        </div>
+        <div data-key="74" class="key" id="74">
+          <kbd id="74">SNAR</kbd>
+        </div>
+        <div data-key="83" class="key" id="83">
+          <kbd id="83">HHAT</kbd>
+        </div>
+        <div data-key="70" class="key" id="70">
+          <kbd id="70">CYMB</kbd>
+        </div>
+        <div data-key="65" class="key" id="65">
+          <kbd id="65">TAMB</kbd>
+        </div>
+        <div data-key="72" class="key" id="72">
+          <kbd id="72">CONG</kbd>
+        </div>
+
+        <div data-key="75" class="key" id="75">
+          <kbd id="75">BONG</kbd>
+        </div>
+        <div data-key="76" class="key" id="76">
+          <kbd id="76">CLAV</kbd>
+        </div>
+      </div>
+      <div class="trigs">
+        <div class="trig" id="trig1">
+          <span id="trig1">1</span>
+        </div>
+        <div class="trig" id="trig2">
+          <span id="trig2">2</span>
+        </div>
+        <div class="trig" id="trig3">
+          <span id="trig3">3</span>
+        </div>
+        <div class="trig" id="trig4">
+          <span id="trig4">4</span>
+        </div>
+        <div class="trig" id="trig5">
+          <span id="trig5">5</span>
+        </div>
+        <div class="trig" id="trig6">
+          <span id="trig6">6</span>
+        </div>
+        <div class="trig" id="trig7">
+          <span id="trig7">7</span>
+        </div>
+        <div class="trig" id="trig8">
+          <span id="trig8">8</span>
+        </div>
+        <div class="trig" id="trig9">
+          <span id="trig9">9</span>
+        </div>
+        <div class="trig" id="trig10">
+          <span id="trig10">10</span>
+        </div>
+        <div class="trig" id="trig11">
+          <span id="trig11">11</span>
+        </div>
+        <div class="trig" id="trig12">
+          <span id="trig12">12</span>
+        </div>
+        <div class="trig" id="trig13">
+          <span id="trig13">13</span>
+        </div>
+        <div class="trig" id="trig14">
+          <span id="trig14">14</span>
+        </div>
+        <div class="trig" id="trig15">
+          <span id="trig15">15</span>
+        </div>
+        <div class="trig" id="trig16">
+          <span id="trig16">16</span>
+        </div>
+      </div>
+    </div>
+    <audio data-key="65" src="sounds2/tamb.wav"></audio>
+    <audio data-key="83" src="sounds2/hihat.wav"></audio>
+    <audio data-key="68" src="sounds2/kick.wav"></audio>
+    <audio data-key="70" src="sounds2/cymbal.wav"></audio>
+    <audio data-key="72" src="sounds2/conga.wav"></audio>
+    <audio data-key="74" src="sounds2/snare.wav"></audio>
+    <audio data-key="75" src="sounds2/bongo.wav"></audio>
+    <audio data-key="76" src="sounds2/clave.wav"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>

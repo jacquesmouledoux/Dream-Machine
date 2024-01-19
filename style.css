@@ -1,0 +1,213 @@
+html {
+  font-size: 10px;
+  background: rgba(210, 220, 248, 0.4);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+span {
+  font-size: 1.5rem;
+}
+
+.shell {
+  border: 0.8rem solid black;
+  margin: 10rem;
+  background-color: rgb(249, 234, 236);
+  border-radius: 15px;
+
+  /* border: min(150px, 5%); */
+  /* padding-right: min(150px, 15%);
+  padding-left: min(150px, 15%); */
+  /* display: flex;
+  align-items: center;
+  width: 100vs;
+  flex: 1; */
+}
+
+.keys {
+  display: flex;
+  flex: 0;
+  height: 20vh;
+  align-items: start;
+  justify-content: center;
+
+  border-radius: 0.75rem;
+  margin: 2rem 3rem 1rem 3rem;
+  padding: 5rem 1rem 0rem 1rem;
+}
+
+.trigs {
+  display: flex;
+  flex: 2;
+  height: 20vh;
+  align-items: start;
+  justify-content: space-evenly;
+  border-radius: 0.75rem;
+  margin: 0rem 3rem 0rem 3rem;
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+.key {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: black;
+  background: rgba(210, 220, 248, 0.4);
+  user-select: none;
+}
+
+.trig {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  width: 7rem;
+  text-align: center;
+  color: black;
+  background: rgba(210, 220, 248, 0.4);
+  user-select: none;
+  transition: all 0.07s ease;
+}
+
+.playing {
+  transform: scale(1.1);
+  /* border-color: #fffaaf;
+  box-shadow: 0 0 1rem #fffaaf; */
+}
+
+kbd {
+  display: block;
+  font-size: 2rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+.trigselected {
+  font-size: 1.9rem;
+}
+
+.keyselected {
+  background: rgba(103, 156, 247, 0.824);
+  color: white;
+}
+
+.button {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 3.5rem 1rem 0rem 5rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  width: 7rem;
+  text-align: center;
+  color: black;
+  background: rgba(210, 220, 248, 0.4);
+  user-select: none;
+  transition: all 0.07s ease;
+}
+/* 
+.tempobutton {
+  user-select: auto;
+  margin: 3.5rem 0rem 0rem 0ch;
+  padding: 0.5rem;
+  font-size: 2.2rem;
+} */
+
+/* .tempotext {
+  margin: 3.5rem 0rem 0rem 5rem;
+  font-size: 1.5rem;
+  padding: 1.4rem 0.5rem;
+  width: 7rem;
+  text-align: center;
+  color: black;
+  background: rgba(0, 0, 0, 0);
+  user-select: none;
+  transition: all 0.07s ease;
+} */
+
+.top-row {
+  display: flex;
+  flex: 2;
+  /* height: 20vh; */
+  align-items: start;
+  justify-content: left;
+  border-radius: 0.75rem;
+  /* margin: 3rem 3rem 0rem 3rem; */
+  padding: 3rem 0.2rem 1rem 0.2rem;
+}
+
+.pressed {
+  color: white;
+  background: rgba(103, 156, 247, 0.824);
+}
+
+.pressanim {
+  transform: scale(1.1);
+}
+
+.tempo {
+  margin: 3.1rem 0rem 0rem 0rem;
+  width: 1rem;
+  font-size: 1.5rem;
+}
+
+.minus {
+  margin-left: 5rem;
+}
+
+/* .plus {
+  margin-top: 3.5rem;
+} */
+
+.tempotext {
+  margin: 3rem 0rem 0rem 0rem;
+  padding: 1rem 0rem;
+  width: 11rem;
+  text-align: center;
+  color: black;
+  background: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+
+.temponumber {
+  font-size: 3rem;
+  /* text-decoration: underline; */
+}
+
+.plusminus {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title-text {
+  font-size: 4rem;
+  font-family: "Courier New";
+  letter-spacing: 0.8rem;
+  font-weight: bold;
+
+  color: rgba(67, 127, 231, 0.824);
+  background: rgba(0, 0, 0, 0);
+  user-select: none;
+  border: 1rem dotted black;
+  border-radius: 0.7rem;
+  padding: 2rem 2.5rem;
+}
+
+.title {
+  margin: 2.5rem 4rem 0rem 6rem;
+  padding: 1rem 0rem;
+}
