@@ -205,6 +205,7 @@ kbd {
   border: 0.91rem dotted black;
   border-radius: 0.7rem;
   padding: 2rem 2.5rem;
+  text-shadow: 0 0.1rem 0.1rem rgba(45, 46, 48, 0.4);
 }
 
 .title {
