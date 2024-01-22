@@ -1,6 +1,12 @@
+:root {
+  --lightblue: rgba(223, 242, 255, 0.908);
+  --darkblue: rgba(114, 166, 255, 0.824);
+  --pinkish: rgb(254, 243, 251);
+}
+
 html {
   font-size: 10px;
-  background: rgba(210, 220, 248, 0.4);
+  background: var(--lightblue);
 }
 
 body,
@@ -16,16 +22,8 @@ span {
 .shell {
   border: 0.8rem solid black;
   margin: 10rem;
-  background-color: rgb(249, 234, 236);
+  background-color: var(--pinkish);
   border-radius: 15px;
-
-  /* border: min(150px, 5%); */
-  /* padding-right: min(150px, 15%);
-  padding-left: min(150px, 15%); */
-  /* display: flex;
-  align-items: center;
-  width: 100vs;
-  flex: 1; */
 }
 
 .keys {
@@ -61,7 +59,7 @@ span {
   width: 10rem;
   text-align: center;
   color: black;
-  background: rgba(210, 220, 248, 0.4);
+  background: var(--lightblue);
   user-select: none;
 }
 
@@ -74,7 +72,7 @@ span {
   width: 7rem;
   text-align: center;
   color: black;
-  background: rgba(210, 220, 248, 0.4);
+  background: var(--lightblue);
   user-select: none;
   transition: all 0.07s ease;
 }
@@ -102,7 +100,7 @@ kbd {
 }
 
 .keyselected {
-  background: rgba(103, 156, 247, 0.824);
+  background: var(--darkblue);
   color: white;
 }
 
@@ -115,7 +113,7 @@ kbd {
   width: 7rem;
   text-align: center;
   color: black;
-  background: rgba(210, 220, 248, 0.4);
+  background: var(--lightblue);
   user-select: none;
   transition: all 0.07s ease;
 }
@@ -152,7 +150,7 @@ kbd {
 
 .pressed {
   color: white;
-  background: rgba(103, 156, 247, 0.824);
+  background: var(--darkblue);
 }
 
 .pressanim {
@@ -199,13 +197,13 @@ kbd {
   letter-spacing: 0.8rem;
   font-weight: bold;
 
-  color: rgba(67, 127, 231, 0.824);
+  color: var(--darkblue);
   background: rgba(0, 0, 0, 0);
   user-select: none;
   border: 0.92rem dotted black;
   border-radius: 0.7rem;
   padding: 2rem 2.5rem;
-  text-shadow: 0 0.1rem 0.1rem rgba(67, 67, 68, 0.4);
+  text-shadow: 0 0.1rem 0.1rem rgba(67, 67, 68, 0.8);
 }
 
 .title {
