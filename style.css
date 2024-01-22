@@ -202,7 +202,7 @@ kbd {
   color: rgba(67, 127, 231, 0.824);
   background: rgba(0, 0, 0, 0);
   user-select: none;
-  border: 0.91rem dotted black;
+  border: 0.92rem dotted black;
   border-radius: 0.7rem;
   padding: 2rem 2.5rem;
   text-shadow: 0 0.1rem 0.1rem rgba(67, 67, 68, 0.4);
