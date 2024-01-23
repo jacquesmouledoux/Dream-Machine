@@ -18,6 +18,25 @@ let tempo = 120;
 const numberOfSteps = 16;
 const numberOfKeys = 8;
 
+const triggers = [
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0],
+];
+
 const pressPlay = function () {
   playButton.classList.add("pressanim");
   console.log(tempo);
@@ -82,8 +101,8 @@ const playSoundOnClick = function (note) {
   key.classList.add("playing");
 };
 
-function removeTransition(e) {
-  if (e.propertyName !== "transform") return;
+function removeKeyTransition(e) {
+  // if (e.propertyName !== "transform") return;
   this.classList.remove("playing");
 }
 
@@ -207,25 +226,6 @@ const playSelectedSound = function () {
   }
 };
 
-const triggers = [
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-];
-
 const removePlayButtonAnim = function () {
   playButton.classList.remove("pressanim");
 };
@@ -281,7 +281,7 @@ trigs.forEach((trig) => {
 });
 
 keys.forEach((key) => {
-  key.addEventListener("transitionend", removeTransition);
+  key.addEventListener("transitionend", removeKeyTransition);
   key.addEventListener("click", soundPressed);
   key.addEventListener("click", selectKey);
 });
@@ -295,58 +295,3 @@ clearButton.addEventListener("transitionend", removeClearButtonPressed);
 
 plusButton.addEventListener("click", plusTempo);
 minusButton.addEventListener("click", minusTempo);
-
-// isDown = false;
-// secondsToHold = 1;
-// plusButton.addEventListener("mousedown", function (event) {
-//   // simulating hold event
-//   if (isDown == false) {
-//     isDown = true;
-//     setTimeout(function () {
-//       if (isDown == true) {
-//         setTimeout(plusTempo(), 50);
-//       }
-//     }, secondsToHold * 10);
-//   }
-// });
-// plusButton.addEventListener("mouseup", function (event) {
-//   isDown = false;
-// });
-
-/*
-let bpm = 120; // Initial BPM value
-let interval;
-
-
-function tempoCalculator() {
-
-}
-
-function startMetronome() {
-  // Calculate interval based on BPM
-  const millisecondsPerBeat = 60000 / bpm;
-
-  // Set the interval
-  interval = setInterval(function () {
-    // Your code to be executed on each beat
-    console.log("Beat!");
-  }, millisecondsPerBeat);
-}
-
-// Example: Change BPM and update the interval
-function updateBPM(newBPM) {
-  bpm = newBPM;
-
-  // Clear the existing interval
-  clearInterval(interval);
-
-  // Start a new interval with the updated BPM
-  startMetronome();
-}
-
-// Start the metronome
-// startMetronome();
-
-// // Example: Update BPM to 150
-// updateBPM(150);
-*/
