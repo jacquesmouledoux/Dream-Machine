@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
     <meta charset="UTF-8" />
     <title>JS Drum Kit</title>
     <link rel="stylesheet" href="style.css" />
@@ -11,13 +15,17 @@
       <div class="top-row">
         <div class="playbutton button"><span>PLAY</span></div>
         <div class="clearbutton button"><span>CLEAR</span></div>
-        <div class="button tempo minus"><span class="plusminus">-</span></div>
-        <div class="tempotext">
-          <span class="temponumber" id="temponumber">120</span
-          ><span class="bpm"> BPM</span>
+        <div class="tempoall">
+          <div class="button tempo minus"><span class="plusminus">-</span></div>
+          <div class="tempotext">
+            <span class="temponumber" id="temponumber">120</span
+            ><span class="bpm"> BPM</span>
+          </div>
+          <div class="button tempo plus"><span class="plusminus">+</span></div>
         </div>
-        <div class="button tempo plus"><span class="plusminus">+</span></div>
-        <div class="title"><span class="title-text">DREAM MACHINE</span></div>
+        <div class="title">
+          <span class="title-text">DREAM MACHINE</span>
+        </div>
       </div>
       <div class="keys">
         <div data-key="68" class="key" id="68">

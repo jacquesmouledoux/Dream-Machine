@@ -5,76 +5,78 @@
 }
 
 html {
-  font-size: 10px;
   background: var(--lightblue);
+  box-sizing: border-box;
+  user-select: none;
 }
 
 body,
 html {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
+  font-size: 10px;
+  max-width: 1300px;
+  min-width: 950px;
 }
+
 span {
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 
 .shell {
   border: 0.8rem solid black;
   margin: 10rem;
+
   background-color: var(--pinkish);
-  border-radius: 15px;
+  border-radius: 1.5rem;
 }
 
-.keys {
+.tempoall {
   display: flex;
-  flex: 0;
-  height: 20vh;
-  align-items: start;
-  justify-content: center;
+}
 
+.keys,
+.trigs,
+.top-row {
+  display: flex;
+  height: 5rem;
+  align-items: start;
+  justify-content: space-between;
   border-radius: 0.75rem;
-  margin: 2rem 3rem 1rem 3rem;
-  padding: 5rem 1rem 0rem 1rem;
+  margin: 2rem 2rem 0rem 2rem;
+  padding-top: 4rem;
 }
 
 .trigs {
-  display: flex;
-  flex: 2;
-  height: 20vh;
-  align-items: start;
-  justify-content: space-evenly;
-  border-radius: 0.75rem;
-  margin: 0rem 3rem 0rem 3rem;
-  padding: 0rem 1rem 0rem 1rem;
+  margin-bottom: 5rem;
 }
 
+.top-row {
+  margin: 0rem 2rem 7rem 2rem;
+}
+
+.trig {
+  display: inline-block;
+  border: 0.4rem solid black;
+  border-radius: 50rem;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  width: 5rem;
+  min-width: 2rem;
+  text-align: center;
+  color: black;
+  background: var(--lightblue);
+  transition: all 0.07s ease;
+}
 .key {
   border: 0.4rem solid black;
   border-radius: 0.5rem;
   margin: 1rem;
-  font-size: 1.5rem;
   padding: 1rem 0.5rem;
   transition: all 0.055s ease;
   width: 10rem;
   text-align: center;
   color: black;
   background: var(--lightblue);
-  user-select: none;
-}
-
-.trig {
-  border: 0.4rem solid black;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  font-size: 1.5rem;
-  padding: 1rem 0.5rem;
-  width: 7rem;
-  text-align: center;
-  color: black;
-  background: var(--lightblue);
-  user-select: none;
-  transition: all 0.07s ease;
 }
 
 .playing {
@@ -89,14 +91,13 @@ kbd {
 }
 
 .sound {
-  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: #ffc600;
 }
 
 .trigselected {
-  font-size: 1.9rem;
+  font-size: 19px;
 }
 
 .keyselected {
@@ -107,45 +108,28 @@ kbd {
 .button {
   border: 0.4rem solid black;
   border-radius: 0.5rem;
-  margin: 3.5rem 1rem 0rem 5rem;
-  font-size: 1.5rem;
+  margin: 3.5rem 1rem 0rem 1rem;
   padding: 1rem 0.5rem;
   width: 7rem;
   text-align: center;
   color: black;
   background: var(--lightblue);
-  user-select: none;
   transition: all 0.07s ease;
 }
-/* 
-.tempobutton {
-  user-select: auto;
-  margin: 3.5rem 0rem 0rem 0ch;
-  padding: 0.5rem;
-  font-size: 2.2rem;
-} */
 
-/* .tempotext {
-  margin: 3.5rem 0rem 0rem 5rem;
-  font-size: 1.5rem;
-  padding: 1.4rem 0.5rem;
-  width: 7rem;
-  text-align: center;
-  color: black;
-  background: rgba(0, 0, 0, 0);
-  user-select: none;
-  transition: all 0.07s ease;
-} */
+.tempo {
+  width: 1rem;
+  margin: 3.2rem 0rem 0rem 0rem;
+  padding: 1rem 0.5rem;
+  border-radius: 50rem;
+}
 
-.top-row {
-  display: flex;
-  flex: 2;
-  /* height: 20vh; */
-  align-items: start;
-  justify-content: left;
-  border-radius: 0.75rem;
-  /* margin: 3rem 3rem 0rem 3rem; */
-  padding: 3rem 0.2rem 1rem 0.2rem;
+.tempotext {
+  margin: 4.3rem 1rem 0rem 1rem;
+}
+
+.temponumber {
+  font-size: 3rem;
 }
 
 .pressed {
@@ -157,56 +141,93 @@ kbd {
   transform: scale(1.1);
 }
 
-.tempo {
-  margin: 3.1rem 0rem 0rem 0rem;
-  width: 1rem;
-  font-size: 1.5rem;
-}
-
-.minus {
-  margin-left: 5rem;
-}
-
-/* .plus {
-  margin-top: 3.5rem;
-} */
-
-.tempotext {
-  margin: 3rem 0rem 0rem 0rem;
-  padding: 1rem 0rem;
-  width: 11rem;
-  text-align: center;
-  color: black;
-  background: rgba(0, 0, 0, 0);
-  user-select: none;
-}
-
-.temponumber {
-  font-size: 3rem;
-  /* text-decoration: underline; */
-}
-
 .plusminus {
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
-}
-
-.title-text {
-  font-size: 4rem;
-  font-family: "Courier New";
-  letter-spacing: 0.8rem;
-  font-weight: bold;
-
-  color: var(--darkblue);
-  background: rgba(0, 0, 0, 0);
-  user-select: none;
-  border: 0.92rem dotted black;
-  border-radius: 0.7rem;
-  padding: 2rem 2.5rem;
-  text-shadow: 0 0.1rem 0.1rem rgba(67, 67, 68, 0.8);
 }
 
 .title {
-  margin: 2.5rem 4rem 0rem 6rem;
-  padding: 1rem 0rem;
+  margin: 3.6rem 1rem;
+}
+
+.title-text {
+  font-size: 40px;
+  font-family: "Courier New";
+  letter-spacing: 0.8rem;
+  font-weight: bold;
+  color: var(--darkblue);
+  background: rgba(0, 0, 0, 0);
+  border: 0.92rem dotted black;
+  border-radius: 0.7rem;
+  padding: 1.5rem 2rem;
+  text-shadow: 0 0.1rem 0.1rem rgba(67, 67, 68, 0.8);
+}
+
+@media (max-width: 1207px) {
+  .trig {
+    margin: 0.5rem;
+    font-size: 1px;
+    padding: 0.5rem 0.25rem;
+    width: 2.5rem;
+    min-width: 1.5rem;
+  }
+  .title-text {
+    font-size: 30px;
+    font-family: "Courier New";
+    border: 0.7rem dotted black;
+    letter-spacing: 0.4rem;
+    padding: 1rem 1.25rem;
+  }
+  .title {
+    margin: 4.1rem 1rem;
+  }
+  .trigs {
+    margin-bottom: 4rem;
+    margin-right: 2.7rem;
+  }
+  .top-row {
+    margin-top: 0rem;
+  }
+  .trigselected {
+    font-size: 19px;
+  }
+  .top-row {
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 1058px) {
+  .title-text {
+    font-size: 25px;
+    font-family: "Courier New";
+    border: 0.6rem dotted black;
+    letter-spacing: 0.2rem;
+  }
+
+  .title {
+    margin: 4.4rem 1rem;
+  }
+
+  .top-row {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 976px) {
+  .top-row {
+    margin-top: 0rem;
+  }
+
+  .key {
+    border: 0.4rem solid black;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 1rem;
+    padding: 1rem 0.1rem;
+    transition: all 0.055s ease;
+    width: 10rem;
+    text-align: center;
+    color: black;
+    background: var(--lightblue);
+  }
 }
